@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "646974655020",
+    "project_id": "easework-eafea",
+    "storage_bucket": "easework-eafea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646974655020:android:98056e35070734a8965f89",
+        "android_client_info": {
+          "package_name": "com.easework"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646974655020-6q8vd0ed034dov614ec303plkhb0ard1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwYebjTWYu-HirKbiKgvc2yhJihK776XM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646974655020-6q8vd0ed034dov614ec303plkhb0ard1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
