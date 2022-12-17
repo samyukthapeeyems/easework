@@ -3,7 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
 import useAuth from './contexts/AuthContext';
 
-import {ScreenA, ScreenB, ScreenC} from './screens';
+import {ScreenA, Auth} from './screens';
 
 
 const TabsScreen = () => {
@@ -23,8 +23,7 @@ const TabsScreen = () => {
         },
       }}>
       <Tabs.Screen name="A" component={ScreenA} options={{title: 'My home'}} />
-      <Tabs.Screen name="B" component={ScreenB} />
-      <Tabs.Screen name="C" component={ScreenC} />
+      {/* <Tabs.Screen name="B" component={ScreenB} /> */}
     </Tabs.Navigator>
   );
 };
