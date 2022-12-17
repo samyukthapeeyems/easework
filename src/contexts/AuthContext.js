@@ -1,5 +1,5 @@
 import React, { createContext, useReducer, useContext } from 'react';
-import { initialState, AuthReducer } from '../state/AuthReducer';
+import { initialState, AuthReducer } from '../states/AuthReducer';
 import { GoogleSignin } from '@react-native-google-signin/google-signin';
 import auth from '@react-native-firebase/auth';
 

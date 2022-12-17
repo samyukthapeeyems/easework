@@ -3,7 +3,8 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
 import useAuth from './contexts/AuthContext';
 
-import {ScreenA, Auth} from './screens';
+import ScreenA from './screens/ScreenA';
+import Auth from './screens/Auth';
 
 
 const TabsScreen = () => {
@@ -11,7 +12,7 @@ const TabsScreen = () => {
 
   return (
     <Tabs.Navigator
-      initialRouteName="Menu"
+      initialRouteName="A"
       // screenOptions={{ headerShown: false }}
       screenOptions={{
         headerStyle: {

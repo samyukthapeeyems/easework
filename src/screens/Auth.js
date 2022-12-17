@@ -1,6 +1,6 @@
 import {Text} from 'react-native';
 
-const Auth = () => {
+export default Auth = () => {
     return(
         <Text>Helloo</Text>
     )
