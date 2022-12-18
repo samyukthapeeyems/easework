@@ -104,7 +104,8 @@ const styles = StyleSheet.create({
   },
   cardText: {
     padding: 50,
-    fontSize: 30,
+    fontSize: 20,
+    color: "black"
   },
   Button: {
     justifyContent: 'center',
