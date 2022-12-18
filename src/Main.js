@@ -29,7 +29,9 @@ const TabsScreen = () => {
           fontWeight: 'bold',
         },
       }}>
-      <Tabs.Screen name="Todo" component={Todo}  />
+
+      {/* <Tabs.Screen name="Todo" component={Todo}  /> */}
+
       <Tabs.Screen name="Home" component={Home} options={{title: 'Home'}} />
       <Tabs.Screen name="Activities" component={Activities} options={{title: 'Activities'}}/>
       <Tabs.Screen name="Schedules" component={Schedules} options={{title: 'Schedules'}}/>
