@@ -5,6 +5,7 @@ import useAuth from './contexts/AuthContext';
 
 import ScreenA from './screens/ScreenA';
 import Auth from './screens/Auth';
+import { Home } from './screens/Home';
 
 
 const TabsScreen = () => {
@@ -12,7 +13,7 @@ const TabsScreen = () => {
 
   return (
     <Tabs.Navigator
-      initialRouteName="A"
+      initialRouteName="Home"
       // screenOptions={{ headerShown: false }}
       screenOptions={{
         headerStyle: {
@@ -23,7 +24,7 @@ const TabsScreen = () => {
           fontWeight: 'bold',
         },
       }}>
-      <Tabs.Screen name="A" component={ScreenA} options={{title: 'My home'}} />
+      <Tabs.Screen name="Home" component={Home} options={{title: 'My home'}} />
       {/* <Tabs.Screen name="B" component={ScreenB} /> */}
     </Tabs.Navigator>
   );

@@ -6,6 +6,7 @@ import { ProgressChart } from 'react-native-chart-kit';
 
 export const Home = () => {
     const [dismiss, setDismiss] = useState(false);
+    console.log("2221")
 
     if (dismiss == false) {
         <View style={styles.card}>
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
     Text: {
         padding: 50,
         fontSize: 30,
-        color: "white"
+        color: "black"
 
     },
     card: {
