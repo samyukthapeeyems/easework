@@ -11,7 +11,7 @@ export function AuthProvider({ children }) {
   const signIn = async () => {
     GoogleSignin.configure({
       webClientId:
-        '462671993634-lsbm61qmsbu7s6t64os8i3aj9kv2a23m.apps.googleusercontent.com',
+      '646974655020-6q8vd0ed034dov614ec303plkhb0ard1.apps.googleusercontent.com'
     });
     try {
       await GoogleSignin.hasPlayServices({

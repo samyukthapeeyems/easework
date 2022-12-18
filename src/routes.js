@@ -8,12 +8,13 @@ import Auth from './screens/Auth';
 import Activities from './screens/Activities';
 import Schedules from './screens/Schedules';
 
+
 const TabsScreen = () => {
   const Tabs = createBottomTabNavigator();
 
   return (
     <Tabs.Navigator
-      initialRouteName="A"
+      initialRouteName="Home"
       // screenOptions={{ headerShown: false }}
       screenOptions={{
         headerStyle: {
@@ -28,6 +29,7 @@ const TabsScreen = () => {
       <Tabs.Screen name="Activities" component={Activities} options={{title: 'Activities'}}/>
       <Tabs.Screen name="Schedules" component={Schedules} options={{title: 'Schedules'}}/>
 
+      {/* <Tabs.Screen name="B" component={ScreenB} /> */}
     </Tabs.Navigator>
   );
 };
@@ -37,7 +39,7 @@ export default function Routes() {
   const AuthStack = createStackNavigator();
   const MainStack = createStackNavigator();
 
-  return true ? (
+  return isAuthenticated ? (
     <NavigationContainer>
       <MainStack.Navigator screenOptions={{headerShown: false}}>
         <MainStack.Screen name="TabsScreen" component={TabsScreen} />
