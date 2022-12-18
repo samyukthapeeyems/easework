@@ -5,7 +5,10 @@ import useAuth from './contexts/AuthContext';
 
 import { useEffect } from 'react';
 import Auth from './screens/Auth';
-import {Home} from './screens/Home';
+import Home from './screens/Home';
+import Todo from './screens/Todo';
+
+
 import auth from '@react-native-firebase/auth';
 import Activities from './screens/Activities';
 import Schedules from './screens/Schedules';
@@ -26,6 +29,7 @@ const TabsScreen = () => {
           fontWeight: 'bold',
         },
       }}>
+      <Tabs.Screen name="Todo" component={Todo}  />
       <Tabs.Screen name="Home" component={Home} options={{title: 'Home'}} />
       <Tabs.Screen name="Activities" component={Activities} options={{title: 'Activities'}}/>
       <Tabs.Screen name="Schedules" component={Schedules} options={{title: 'Schedules'}}/>
