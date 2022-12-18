@@ -4,7 +4,7 @@ import Button from '../components/Button';
 import { ProgressChart } from 'react-native-chart-kit';
 
 
-export const Home = () => {
+export function Home(){
     const [dismiss, setDismiss] = useState(false);
     console.log("2221")
 

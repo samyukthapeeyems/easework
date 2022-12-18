@@ -1,10 +1,11 @@
-import {Text, TouchableOpacity, View} from 'react-native';
+import {Text, TouchableOpacity, View, StyleSheet} from 'react-native';
 import useAuth from '../contexts/AuthContext';
 
-export default Auth = () => {
-  const {signIn} = useAuth();
+
+export default function Profile(){
+    const {signOut} = useAuth();
   return (
-    <View>
+    <View style={styles.container}>
       <TouchableOpacity
         style={{
           backgroundColor: '#1F9EFF',
@@ -12,23 +13,35 @@ export default Auth = () => {
           borderRadius: 10,
           alignItems: 'center',
           justifyContent: 'center',
-          flexDirection: 'row',
+          width: "40%"
         }}
         onPress={async () => {
             console.log("clicked")
-            await signIn()
+            await signOut()
             }}>
         {/* <GoogleLogo /> */}
         <Text
           style={{
             color: 'white',
-            fontSize: 18,
+            fontSize: 20,
             fontWeight: '700',
-            marginLeft: 10,
+            alignSelf: 'center'
           }}>
-          Login With Google
+          LOGOUT
         </Text>
       </TouchableOpacity>
     </View>
   );
-};
+
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        width: "100%",
+        backgroundColor: "#F5FCEE"
+    },
+
+
+})

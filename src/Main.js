@@ -3,7 +3,6 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createStackNavigator} from '@react-navigation/stack';
 import useAuth from './contexts/AuthContext';
 
-import ScreenA from './screens/ScreenA';
 import { useEffect } from 'react';
 import Auth from './screens/Auth';
 import Home from './screens/Home';
@@ -11,6 +10,9 @@ import Todo from './screens/Todo';
 
 
 import auth from '@react-native-firebase/auth';
+import Activities from './screens/Activities';
+import Schedules from './screens/Schedules';
+import Profile from './screens/Profile';
 
 const TabsScreen = () => {
   const Tabs = createBottomTabNavigator();
@@ -21,15 +23,18 @@ const TabsScreen = () => {
       // screenOptions={{ headerShown: false }}
       screenOptions={{
         headerStyle: {
-          backgroundColor: '#f4511e',
+          backgroundColor: '#F5FCEE',
         },
-        headerTintColor: '#fff',
         headerTitleStyle: {
           fontWeight: 'bold',
         },
       }}>
-      <Tabs.Screen name="Home" component={Home} />
       <Tabs.Screen name="Todo" component={Todo}  />
+      <Tabs.Screen name="Home" component={Home} options={{title: 'Home'}} />
+      <Tabs.Screen name="Activities" component={Activities} options={{title: 'Activities'}}/>
+      <Tabs.Screen name="Schedules" component={Schedules} options={{title: 'Schedules'}}/>
+      <Tabs.Screen name="Profle" component={Profile} options={{title: 'Profile'}}/>
+
 
       {/* <Tabs.Screen name="B" component={ScreenB} /> */}
     </Tabs.Navigator>
