@@ -1,4 +1,4 @@
-import { Text, StyleSheet, View, SafeAreaView, ScrollView, Dimensions } from 'react-native';
+import { Text, StyleSheet, View, SafeAreaView, ScrollView, Dimensions, Image, TouchableOpacity } from 'react-native';
 import { useState } from 'react';
 import Button from '../components/Button';
 import { ProgressChart } from 'react-native-chart-kit';
@@ -24,6 +24,15 @@ export function Home(){
         <SafeAreaView style={styles.container}>
             <View style={styles.textContainer}>
                 <Text style={styles.Text}>Hello John Doe!</Text>
+                <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', }}>
+                <TouchableOpacity>
+              <Image
+                source={{uri: 'https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png'}}
+                // resizeMode="contain"
+                style={styles.profilePicture}
+              />
+              </TouchableOpacity>
+            </View>
             </View>
             
             {/* <ProgressChart
@@ -64,14 +73,16 @@ const styles = StyleSheet.create({
         backgroundColor: "#F5FCEE"
     },
     textContainer: {
-        height: "20%",
+        flexDirection: 'row',
+        alignContent: 'space-around',
+        height: "13%",
         width: "100%",
         backgroundColor: "#688D89"
     },
     Text: {
-        padding: 50,
+        paddingLeft: 20,
         fontSize: 30,
-        color: "black"
+        color: "#fff"
 
     },
     card: {
@@ -115,6 +126,9 @@ const styles = StyleSheet.create({
     close: {
         width: "15%",
         height: "15%"
+    },
+    profilePicture: {
+        borderRadius: 30,
     }
 
 })

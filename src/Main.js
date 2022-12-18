@@ -56,11 +56,14 @@ export default function Routes() {
   }, []);
 
   return isAuthenticated ? (
+    <>
     <NavigationContainer>
       <MainStack.Navigator screenOptions={{headerShown: false}}>
         <MainStack.Screen name="TabsScreen" component={TabsScreen} />
       </MainStack.Navigator>
     </NavigationContainer>
+    </>
+
   ) : (
     <NavigationContainer>
       <AuthStack.Navigator
