@@ -6,7 +6,10 @@ import useAuth from './contexts/AuthContext';
 import ScreenA from './screens/ScreenA';
 import { useEffect } from 'react';
 import Auth from './screens/Auth';
-import {Home} from './screens/Home';
+import Home from './screens/Home';
+import Todo from './screens/Todo';
+
+
 import auth from '@react-native-firebase/auth';
 
 const TabsScreen = () => {
@@ -25,7 +28,9 @@ const TabsScreen = () => {
           fontWeight: 'bold',
         },
       }}>
-      <Tabs.Screen name="Home" component={Home} options={{title: 'My home'}} />
+      <Tabs.Screen name="Home" component={Home} />
+      <Tabs.Screen name="Todo" component={Todo}  />
+
       {/* <Tabs.Screen name="B" component={ScreenB} /> */}
     </Tabs.Navigator>
   );
